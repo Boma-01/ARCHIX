@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIX</title>
+     <link rel="icon" type="image/png" sizes="any" href="../../assets/Company_Logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header class="absolute top-0 left-0 w-full z-20">
+        <nav class="w-full px-4 lg:px-6 py-2 ">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-white">
+                <!-- Brand name + Logo -->
+                  <div class="flex items-center space-x-2">
+                    <img src="../../assets/Company_Logo.png" alt="pictures" class="h-20 w-auto">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap">ARCHIX</span>
+                  </div>
+                <!-- Navigation links -->
+                 <div class="flex lg:space-x-16 px-10">
+                    <a href="Index.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Home</a>
+                    <a href="#" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">About</a>
+                    <a href="project.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Projects</a>
+                 </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Hero section-->
+        <section class="relative bg-[url('../../assets/Hero_Section.png')] bg-cover bg-center bg-no-repeat h-[600px]">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 flex items-center min-h-screen">
+                <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                    <div class="mr-auto place-self-center lg:col-span-7">
+                        <h1 class="w-full mb-4 text-4xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Our Projects</h1>
+                        <p class="w-full mb-6 text-gray-400 lg:mb-8 md:text-lg lg:text-xl">A collection of modern architectural works that reflect creativity, innovation and precision.</p>
+                        <a href="#" class="inline-flex items-center justify-center py-3 text-center">
+                            <button class="bg-[#C19947] text-black py-3 px-5 rounded-full transition-color duration-200">Book a session</button>
+                        </a> 
+                    </div> 
+                </div>               
+            </div>
+        </section>
+        <!--Project Categories-->
+        <section class="bg-[#0D0D0D] py-6 text-white">
+            <div class="flex text-left space-x-16 px-10 max-w-screen-xl px-4 mx-auto">
+                <a href="#" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">All Projects</a>
+                <a href="#" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Residential</a>
+                <a href="#" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Commercial</a>
+                <a href="#" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Interior</a>
+            </div>
+        </section>
+        <!--Project Gallery-->
+        <section class="bg-[#0D0D0D] py-6 text-white ">
+            <div class="swipper mySwiper">
+                <div class="swipper-wrapper">
+                    <!--slide 1-->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-screen-xl px-4">
+                            <!-- Project 1 -->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/villa1.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
+                                    <h3 class="text-lg font-semibold mb-3">Urban Residence</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A minimalist home design with open spaces and natural light that blends with the surroundings.</p>
+                                </div>
+                            </div>
+                            <!--Project 2-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/commercial1.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
+                                    <h3 class="text-lg font-semibold mb-3">Confrence Hall</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A modern public confrence hall with sleek glass facades and a well matching aesthetics.</p>
+                                </div>
+                            </div>
+                            <!--Project 3-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/villa2.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
+                                    <h3 class="text-lg font-semibold mb-3">Luxury Villa</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">Elegant architectural design blending comfort, simplicity, and premium materials.</p>
+                                </div>
+                            </div>
+                            <!--Project 4-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/interior1.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interrior</p>
+                                    <h3 class="text-lg font-semibold mb-3">Home Interrior</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A refined interrior concept focused on minimalism, functionality and timeless aesthetics</p>
+                                </div>
+                            </div>
+                            <!--Project 5-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/commercial5.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">commercial</p>
+                                    <h3 class="text-lg font-semibold mb-3">Cooperate Office</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A workspace designed to inspire productivity with modern architecture and sustainable features</p>
+                                </div>
+                            </div>
+                            <!--Project 6-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/interior8.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interrior</p>
+                                    <h3 class="text-lg font-semibold mb-3">Office Interrior</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">An inspiring workplace interior designed to enhance creativity by utilizing modern aesthetics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--slide 2-->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-screen-xl px-4">
+                            <!-- Project 7 -->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/commercial2.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
+                                    <h3 class="text-lg font-semibold mb-3">Luxury Business Hotel</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">An elegant hospitality designed to deliver comfort, and exceptional guest experiences.</p>
+                                </div>
+                            </div>
+                            <!--Project 8-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/interior6.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Interior</p>
+                                    <h3 class="text-lg font-semibold mb-3">Company Conference Hall</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A design meant for business meetings featuring flexible layouts and a touch of elegance.</p>
+                                </div>
+                            </div>
+                            <!--Project 9-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/commercial3.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
+                                    <h3 class="text-lg font-semibold mb-3">Hospital</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A healthcare facility designed for patient comfort and advanced medical infrastructure in mind.</p>
+                                </div>
+                            </div>
+                            <!--Project 10-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/villa3.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
+                                    <h3 class="text-lg font-semibold mb-3">Modern Bungalow</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A budget friendly yet well designed architectural structure combining simplicity and modern aesthetics.</p>
+                                </div>
+                            </div>
+                            <!--Project 11-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/interior4.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interior</p>
+                                    <h3 class="text-lg font-semibold mb-3">Kitchen Interior</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A contemporary kitchen designed with premium finishes, smart storage, and functional layouts.</p>
+                                </div>
+                            </div>
+                            <!--Project 12-->
+                            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800">
+                                <img src="../../assets/villa4.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <div class="p-6">
+                                    <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
+                                    <h3 class="text-lg font-semibold mb-3">Modern Haven</h3>
+                                    <p class="text-gray-400 mb-6 leading-related">A modern residential design that balances comfort, functionality, and timeless architectural appeal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
