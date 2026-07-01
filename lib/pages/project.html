@@ -37,7 +37,7 @@
                             <h1 class="w-full mb-4 text-4xl  tracking-tight leading-none md:text-5xl xl:text-6xl text-white">Our Projects</h1>
                             <p class="w-full mb-6 text-gray-400 lg:mb-8 md:text-lg lg:text-xl">A collection of modern architectural works that reflect creativity, innovation and precision.</p>
                             <a href="#" class="inline-flex items-center justify-center py-3 text-center">
-                                <button class="bg-[#C19947] text-black py-3 px-5 rounded-full transition-color duration-200">Book a session</button>
+                                <button class="openBookingModal bg-[#C19947] text-black py-3 px-5 rounded-full hover:opacity-90 transition-color duration-200">Book a session</button>
                             </a> 
                         </div> 
                     </div>               
@@ -242,6 +242,101 @@
         </section>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="../script/swiper.js"></script>
+        <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm px-4">
+            <div class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#181818] border border-white/10 shadow-2xl">
+            <!-- Close Button -->
+            <button id="closeBookingModal" class="absolute top-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#C19947] hover:text-black">✕</button>
+                <div class="grid lg:grid-cols-2">
+                    <!-- LEFT PANEL -->
+                    <div class="relative hidden lg:flex flex-col justify-between bg-[#111111] p-10">
+                        <div>
+                            <span class="text-[#C19947] uppercase tracking-[0.3em] text-sm">ARCHIX</span>
+                            <h2 class="mt-5 text-4xl font-bold leading-tight text-white">Let's Build Something Extraordinary.</h2>
+                            <p class="mt-6 text-lg leading-8 text-gray-400">Schedule a consultation with our architects and let's discuss your ideas, budget and project goals.</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="h-2 w-2 rounded-full bg-[#C19947]"></div>
+                                    <p class="text-gray-300">Personalized consultation</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="h-2 w-2 rounded-full bg-[#C19947]"></div>
+                                <p class="text-gray-300">Professional architectural advice</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="h-2 w-2 rounded-full bg-[#C19947]"></div>
+                                <p class="text-gray-300">Response within 24 hours</p>
+                            </div>
+                        </div>
+                        <!-- Image -->
+                        <img src="../../assets/commercial9.jpg" class="mt-10 rounded-2xl object-cover h-auto w-full">
+                    </div>
+                    <!-- RIGHT PANEL -->
+                    <div class="p-10 lg:p-12">
+                        <h2 class="text-4xl font-bold text-white">Book a Consultation</h2>
+                        <p class="mt-3 text-gray-400">Fill in your details and we'll contact you to confirm your preferred meeting schedule.</p>
+                        <form class="mt-10 space-y-7">
+                            <div class="grid gap-6 md:grid-cols-2">
+                                <div>
+                                    <label class="mb-2 block text-sm text-gray-300">Full Name</label>
+                                    <input type="text" placeholder="John Doe" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                                </div>
+                                <div>
+                                    <label class="mb-2 block text-sm text-gray-300">Email Address</label>
+                                    <input type="email" placeholder="john@email.com" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                                </div>
+                                <div>
+                                    <label class="mb-2 block text-sm text-gray-300"> Phone Number</label>
+                                    <input type="text" placeholder="+234..." class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                                </div>
+                                <div>
+                                    <label class="mb-2 block text-sm text-gray-300">Project Type</label>
+                                    <select class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                                        <option>Residential</option>
+                                        <option>Commercial</option>
+                                        <option>Interior Design</option>
+                                        <option>Renovation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mb-2 block text-sm text-gray-300">Preferred Date</label>
+                                <input type="date" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                            </div>
+                            <div>
+                                <label class="mb-2 block text-sm text-gray-300">  Preferred Time </label>
+                                <select class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                                    <option>9:00 AM</option>
+                                    <option>10:00 AM</option>
+                                    <option>11:00 AM</option>
+                                    <option>12:00 PM</option>
+                                    <option>2:00 PM</option>
+                                    <option>3:00 PM</option>
+                                    <option>4:00 PM</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="mb-2 block text-sm text-gray-300">Estimated Budget (Optional)</label>
+                                <select class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">
+                                    <option>Select Budget</option>
+                                    <option>Under ₦5 Million</option>
+                                    <option>₦5M - ₦20M</option>
+                                    <option>₦20M - ₦50M</option>
+                                    <option>Above ₦50M</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="mb-2 block text-sm text-gray-300">Project Description</label>
+                                <textarea rows="5" placeholder="Tell us about your dream project..." class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]"></textarea>
+                            </div>
+                            <button class="w-full rounded-full bg-[#C19947] py-4 text-lg font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d9b15b]">Schedule Consultation →</button>
+                            <p class="text-center text-sm text-gray-500">We'll respond within 24 hours to confirm your consultation.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../script/booking.js"></script>
     </main>
     <!--footer -->
     <footer class="bg-[#181818] py-4 text-white">
