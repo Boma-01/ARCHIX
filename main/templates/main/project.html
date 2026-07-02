@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARCHIX</title>
-    <link rel="icon" type="image/png" sizes="any" href="../../assets/Company_Logo.png">
+    <link rel="icon" type="image/png" sizes="any" href="{% static 'main/assets/Company_Logo.png' %}">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -15,21 +16,21 @@
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-white">
                 <!-- Brand name + Logo -->
                   <div class="flex items-center space-x-2">
-                    <img src="../../assets/Company_Logo.png" alt="pictures" class="h-20 w-auto">
+                    <img src="{% static 'main/assets/Company_Logo.png' %}" alt="pictures" class="h-20 w-auto">
                     <span class="self-center text-xl font-semibold whitespace-nowrap">ARCHIX</span>
                   </div>
                 <!-- Navigation links -->
                  <div class="flex lg:space-x-16 px-10">
-                    <a href="Index.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Home</a>
-                    <a href="About.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">About</a>
-                    <a href="project.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Projects</a>
+                    <a href="{% url 'home' %}" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Home</a>
+                    <a href="{% url 'about' %}" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">About</a>
+                    <a href="{% url 'projects' %}" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Projects</a>
                  </div>
             </div>
         </nav>
     </header>
     <main>
         <!--Hero section-->
-        <section class="relative bg-[url('../../assets/Hero_Section.png')] bg-cover bg-center bg-no-repeat h-[600px]">
+        <section class="relative bg-[url('{% static 'main/assets/Hero_Section.png' %}')] bg-cover bg-center bg-no-repeat h-[600px]">
             <div class="absolute inset-0 bg-black/30"></div>
                 <div class="relative z-10 flex items-center min-h-screen">
                     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -62,7 +63,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-screen-xl px-4">
                             <!-- Project 1 -->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/villa1.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/villa1.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
                                     <h3 class="text-lg font-semibold mb-3">Urban Residence</h3>
@@ -71,7 +72,7 @@
                             </div>
                             <!--Project 2-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/commercial1.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/commercial1.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
                                     <h3 class="text-lg font-semibold mb-3">Confrence Hall</h3>
@@ -80,7 +81,7 @@
                             </div>
                             <!--Project 3-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/villa2.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/villa2.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
                                     <h3 class="text-lg font-semibold mb-3">Luxury Villa</h3>
@@ -89,7 +90,7 @@
                             </div>
                             <!--Project 4-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/interior1.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/interior1.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interrior</p>
                                     <h3 class="text-lg font-semibold mb-3">Home Interrior</h3>
@@ -98,7 +99,7 @@
                             </div>
                             <!--Project 5-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/commercial5.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/commercial5.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">commercial</p>
                                     <h3 class="text-lg font-semibold mb-3">Cooperate Office</h3>
@@ -107,7 +108,7 @@
                             </div>
                             <!--Project 6-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/interior8.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/interior8.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interrior</p>
                                     <h3 class="text-lg font-semibold mb-3">Office Interrior</h3>
@@ -121,7 +122,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-screen-xl px-4">
                             <!-- Project 7 -->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/commercial2.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/commercial2.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
                                     <h3 class="text-lg font-semibold mb-3">Luxury Business Hotel</h3>
@@ -130,7 +131,7 @@
                             </div>
                             <!--Project 8-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/interior6.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/interior6.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Interior</p>
                                     <h3 class="text-lg font-semibold mb-3">Company Conference Hall</h3>
@@ -139,7 +140,7 @@
                             </div>
                             <!--Project 9-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/commercial3.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/commercial3.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
                                     <h3 class="text-lg font-semibold mb-3">Hospital</h3>
@@ -148,7 +149,7 @@
                             </div>
                             <!--Project 10-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/villa3.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/villa3.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
                                     <h3 class="text-lg font-semibold mb-3">Modern Bungalow</h3>
@@ -157,7 +158,7 @@
                             </div>
                             <!--Project 11-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/interior4.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/interior4.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interior</p>
                                     <h3 class="text-lg font-semibold mb-3">Kitchen Interior</h3>
@@ -166,7 +167,7 @@
                             </div>
                             <!--Project 12-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/villa4.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/villa4.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
                                     <h3 class="text-lg font-semibold mb-3">Modern Haven</h3>
@@ -180,7 +181,7 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto max-w-screen-xl px-4">
                             <!-- Project 13 -->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/commercial4.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/commercial4.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Commercial</p>
                                     <h3 class="text-lg font-semibold mb-3">Resturant</h3>
@@ -189,7 +190,7 @@
                             </div>
                             <!--Project 14-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/villa5.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/villa5.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
                                     <h3 class="text-lg font-semibold mb-3">Signature Residence</h3>
@@ -198,7 +199,7 @@
                             </div>
                             <!--Project 15-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/interior3.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/interior3.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interior</p>
                                     <h3 class="text-lg font-semibold mb-3">Modern Living Interior</h3>
@@ -207,7 +208,7 @@
                             </div>
                             <!--Project 16-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/villa6.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/villa6.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">Residential</p>
                                     <h3 class="text-lg font-semibold mb-3">Vista Residence</h3>
@@ -216,7 +217,7 @@
                             </div>
                             <!--Project 17-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/interior7.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/interior7.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">interior</p>
                                     <h3 class="text-lg font-semibold mb-3">Signature Study</h3>
@@ -225,7 +226,7 @@
                             </div>
                             <!--Project 18-->
                             <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-                                <img src="../../assets/commercial8.jpg" alt="Project 1" class="w-full h-auto rounded-lg">
+                                <img src="{% static 'main/assets/commercial8.jpg' %}" alt="Project 1" class="w-full h-auto rounded-lg">
                                 <div class="p-6">
                                     <p class="text-[#C19947] text-sm uppercase tracking-wider mb-3">commercial</p>
                                     <h3 class="text-lg font-semibold mb-3">Law Firm</h3>
@@ -241,7 +242,7 @@
             </div>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="../script/swiper.js"></script>
+        <script src="{% static 'main/js/swiper.js' %}"></script>
         <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm px-4">
             <div class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#181818] border border-white/10 shadow-2xl">
             <!-- Close Button -->
@@ -269,7 +270,7 @@
                             </div>
                         </div>
                         <!-- Image -->
-                        <img src="../../assets/commercial9.jpg" class="mt-10 rounded-2xl object-cover h-auto w-full">
+                        <img src="{% static 'main/assets/commercial9.jpg' %}" class="mt-10 rounded-2xl object-cover h-auto w-full">
                     </div>
                     <!-- RIGHT PANEL -->
                     <div class="p-10 lg:p-12">
@@ -336,7 +337,7 @@
                 </div>
             </div>
         </div>
-        <script src="../script/booking.js"></script>
+        <script src="{% static 'main/js/booking.js' %}"></script>
     </main>
     <!--footer -->
     <footer class="bg-[#181818] py-4 text-white">

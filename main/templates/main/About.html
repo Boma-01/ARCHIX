@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARCHIX</title>
-    <link rel="icon" type="image/png" sizes="any" href="../../assets/Company_Logo.png">
+    <link rel="icon" type="image/png" sizes="any" href="{% static 'main/assets/Company_Logo.png' %}">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -15,21 +16,21 @@
             <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl text-white">
                 <!-- Brand name + Logo -->
                   <div class="flex items-center space-x-2">
-                    <img src="../../assets/Company_Logo.png" alt="pictures" class="h-20 w-auto">
+                    <img src="{% static 'main/assets/Company_Logo.png' %}" alt="pictures" class="h-20 w-auto">
                     <span class="self-center text-xl font-semibold whitespace-nowrap">ARCHIX</span>
                   </div>
                 <!-- Navigation links -->
                  <div class="flex lg:space-x-16 px-10">
-                    <a href="Index.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Home</a>
-                    <a href="About.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">About</a>
-                    <a href="project.html" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Projects</a>
+                    <a href="{% url 'home' %}" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Home</a>
+                    <a href="{% url 'about' %}" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">About</a>
+                    <a href="{% url 'projects' %}" class="hover:text-[#C19947] hover:underline underline-offset-6 transition-all duration-200">Projects</a>
                  </div>
             </div>
         </nav>
     </header>
     <main>
         <!--Hero section-->
-        <section class="relative bg-[url('../../assets/Hero_Section.png')] bg-cover bg-center bg-no-repeat h-[600px]">
+        <section class="relative bg-[url('{% static 'main/assets/Hero_Section.png' %}')] bg-cover bg-center bg-no-repeat h-[600px]">
             <div class="absolute inset-0 bg-black/30"></div>
             <div class="relative z-10 flex items-center min-h-screen">
                 <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -38,7 +39,7 @@
                         <h1 class="w-full mb-4 text-4xl  tracking-tight leading-none md:text-4xl xl:text-6xl text-white">Designing Spaces.</h1>
                         <h1 class="w-full mb-4 text-4xl  tracking-tight leading-none md:text-4xl xl:text-5xl text-white">Creating Experience.</h1>
                         <p class="w-full mb-6 text-gray-400 lg:mb-8 md:text-lg lg:text-xl"> We are a team of passionate architects, designers and survayors committed to creating meaningful spaces that inspires</p>
-                        <a href="project.html" class="inline-flex items-center justify-center py-3 text-center">
+                        <a href="{% url 'projects' %}" class="inline-flex items-center justify-center py-3 text-center">
                             <button class="bg-[#C19947] text-black py-3 px-5 rounded-full hover:opacity-90 transition-color duration-200">Our Projects</button>
                         </a> 
                     </div> 
@@ -107,7 +108,7 @@
                     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                         <!-- CARD 1 -->
                         <div class="text-left bg-[#181818] p-6 rounded-lg">
-                            <img src="../../assets/Felix.png" class="w-full rounded-lg mb-4">
+                            <img src="{% static 'main/assets/Felix.png' %}" class="w-full rounded-lg mb-4">
                             <h3 class="text-xl text-white">Osobonye Felix</h3>
                             <h2 class="text-lg text-[#C19947]">Co-Founder and Interior Design Head</h2>
                             <p class="text-gray-400 mt-2 text-lg">A recent graduate of the University Of Nigeria, Nsukka, Enugu state. He brings designs to life with his expertise in interior architecture.</p>
@@ -132,7 +133,7 @@
                         </div>
                         <!-- CARD 2 -->
                         <div class="text-left bg-[#181818] p-6 rounded-lg">
-                            <img src="../../assets/Excel.jpg" class="w-full rounded-lg mb-4">
+                            <img src="{% static 'main/assets/Excel.jpg' %}" class="w-full rounded-lg mb-4">
                             <h3 class="text-xl text-white">Benstowe Excel</h3>
                             <h2 class="text-lg text-[#C19947]">Co-Founder and Principle Architect</h2>
                             <p class="text-gray-400 mt-2 text-lg">A recent graduate of Federal Polytechnic, Nekede, imo state. He leads the creative vision of ARCHIX with 2 years of experience.</p>
@@ -157,7 +158,7 @@
                         </div>
                         <!-- CARD 3 -->
                          <div class="text-left bg-[#181818] p-6 rounded-lg">
-                            <img src="../../assets/Daniel.jpg" class="w-full rounded-lg mb-4">
+                            <img src="{% static 'main/assets/Daniel.jpg' %}" class="w-full rounded-lg mb-4">
                             <h3 class="text-xl text-white">Ndubuisi Daniel</h3>
                             <h2 class="text-lg text-[#C19947]">Co-Founder and Chief Surveyor</h2>
                             <p class="text-gray-400 mt-2 text-lg">A 300lvl student of the department of surverying and geoinformatics, FUTO. He leads the surveying aspect of ARCHIX to deliver quality structures. </p>
