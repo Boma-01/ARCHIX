@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Meeting
+from datetime import datetime
 from django.http import JsonResponse
 
 
@@ -9,6 +10,22 @@ def home(request):
 
         selected_date = request.POST.get("preferred_date")
         selected_time = request.POST.get("preferred_time")
+
+        booking_date = datetime.strptime(selected_date, "%Y-%m-%d").date()
+
+            # Monday = 0
+            # Tuesday = 1
+            # Wednesday = 2
+            # Thursday = 3
+            # Friday = 4
+            # Saturday = 5
+            # Sunday = 6
+
+        if booking_date.weekday() >= 5:
+            return JsonResponse({
+                "success": False,
+                "message": "Consultations are only available Monday to Friday."
+            })
 
         meeting_exists = Meeting.objects.filter(
             preferred_date=selected_date,
