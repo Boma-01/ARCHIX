@@ -89,6 +89,16 @@
             </div>
         </section>
         <!-- Booking Modal -->
+         {% if booking_error %}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(function () {
+            document.getElementById("bookingModal").classList.remove("hidden");
+            document.body.classList.add("overflow-hidden");},
+                100);
+            });
+        </script>
+        {% endif %}
         <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm px-4">
             <div class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl bg-[#181818] border border-white/10 shadow-2xl">
             <!-- Close Button -->
@@ -122,20 +132,25 @@
                     <div class="p-10 lg:p-12">
                         <h2 class="text-4xl font-bold text-white">Book a Consultation</h2>
                         <p class="mt-3 text-gray-400">Fill in your details and we'll contact you to confirm your preferred meeting schedule.</p>
-                        <form method="POST" action="{% url 'home' %}" class="mt-10 space-y-7">
+                        <form method="POST" id="bookingForm" action="{% url 'home' %}" class="mt-10 space-y-7">
                             {% csrf_token %}
+                            <div id="bookingMessage">
+                                {% if booking_error %}
+                                <div class="rounded-xl border border-red-500 bg-red-500/10 p-4 text-red-300">{{ booking_error }}</div>
+                                {% endif %}
+                            </div>
                             <div class="grid gap-6 md:grid-cols-2">
                                 <div>
                                     <label class="mb-2 block text-sm text-gray-300">Full Name</label>
-                                    <input type="text" name="full_name" placeholder="John Doe" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]" required>
+                                    <input type="text" name="full_name" value="{{request.POST.full_name }}" placeholder="John Doe" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]" required>
                                 </div>
                                 <div>
                                     <label class="mb-2 block text-sm text-gray-300">Email Address</label>
-                                    <input type="email" name="email" placeholder="john@email.com" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]" required>
+                                    <input type="email" name="email" value="{{request.POST.email }}" placeholder="john@email.com" class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]" required>
                                 </div>
                                 <div>
                                     <label class="mb-2 block text-sm text-gray-300"> Phone Number</label>
-                                    <input type="text" name="phone" placeholder="+234..." class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]" required>
+                                    <input type="text" name="phone" value="{{request.POST.phone }}" placeholder="+234..." class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]" required>
                                 </div>
                                 <div>
                                     <label class="mb-2 block text-sm text-gray-300">Project Type</label>
@@ -174,7 +189,7 @@
                             </div>
                             <div>
                                 <label class="mb-2 block text-sm text-gray-300">Project Description</label>
-                                <textarea name="project_description" rows="5" placeholder="Tell us about your dream project..." class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]"></textarea>
+                                <textarea name="project_description" rows="5" placeholder="Tell us about your dream project..." class="w-full rounded-xl border border-gray-700 bg-[#232323] px-5 py-4 text-white outline-none transition focus:border-[#C19947]">{{ request.POST.project_description }}</textarea>
                             </div>
                             <button type="submit" class="w-full rounded-full bg-[#C19947] py-4 text-lg font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d9b15b]">Schedule Consultation →</button>
                             <p class="text-center text-sm text-gray-500">We'll respond within 24 hours to confirm your consultation.</p>
@@ -184,6 +199,7 @@
             </div>
         </div>
         <script src="{% static 'main/js/booking.js' %}"></script>
+        <script src="{% static 'main/js/form.js' %}"></script>
     </main>
     <footer class="bg-[#181818] py-4 text-white">
         <div class="max-w-screen-xl px-4 mx-auto text-center">
